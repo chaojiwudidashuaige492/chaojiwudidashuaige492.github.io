@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Java_learning_note_4 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Chapter04_控制结构（1）顺序控制：顺序控制介绍：程序从上到下逐行的执行，中间没有任何判断和跳转 顺序控制注意事项Java中定义变量时采用合法的前向引用，即先定义变量，再使用变量 （2）分支控制：总览： 单分支 双分支 多分支  （1）：单分支基本语法： 123if(条件表达式)&#123;    执行代码块;(可以有多条语句)&#125; 说明：说明（1）：当条件表达式为true时，就会">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java_learning_note_4">
+<meta property="og:url" content="http://example.com/2023/11/22/Java-learning-note-4/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Chapter04_控制结构（1）顺序控制：顺序控制介绍：程序从上到下逐行的执行，中间没有任何判断和跳转 顺序控制注意事项Java中定义变量时采用合法的前向引用，即先定义变量，再使用变量 （2）分支控制：总览： 单分支 双分支 多分支  （1）：单分支基本语法： 123if(条件表达式)&#123;    执行代码块;(可以有多条语句)&#125; 说明：说明（1）：当条件表达式为true时，就会">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-11-22T10:20:54.000Z">
+<meta property="article:modified_time" content="2023-11-22T10:23:39.998Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Java-learning-note-4" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/22/Java-learning-note-4/" class="article-date">
+  <time class="dt-published" datetime="2023-11-22T10:20:54.000Z" itemprop="datePublished">2023-11-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Java_learning_note_4
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Chapter04-控制结构"><a href="#Chapter04-控制结构" class="headerlink" title="Chapter04_控制结构"></a><em><strong>Chapter04</strong></em>_控制结构</h1><h2 id="（1）顺序控制："><a href="#（1）顺序控制：" class="headerlink" title="（1）顺序控制："></a>（1）顺序控制：</h2><h3 id="顺序控制介绍："><a href="#顺序控制介绍：" class="headerlink" title="顺序控制介绍："></a>顺序控制介绍：</h3><p>程序从上到下逐行的执行，中间没有任何判断和跳转</p>
+<h3 id="顺序控制注意事项"><a href="#顺序控制注意事项" class="headerlink" title="顺序控制注意事项"></a>顺序控制注意事项</h3><p>Java中定义变量时采用合法的前向引用，即先定义变量，再使用变量</p>
+<h2 id="（2）分支控制："><a href="#（2）分支控制：" class="headerlink" title="（2）分支控制："></a>（2）分支控制：</h2><h3 id="总览："><a href="#总览：" class="headerlink" title="总览："></a>总览：</h3><ol>
+<li>单分支</li>
+<li>双分支</li>
+<li>多分支</li>
+</ol>
+<h3 id="（1）：单分支"><a href="#（1）：单分支" class="headerlink" title="（1）：单分支"></a>（1）：单分支</h3><p>基本语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if(条件表达式)&#123;</span><br><span class="line">    执行代码块;(可以有多条语句)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h3><p>说明（1）：当条件表达式为true时，就会执行{}内的代码，然后执行接下来的代码。如果为false，就不执行{}内的代码，直接执行接下来的代码。<br>说明（2）：如果{}中只有一条语句，则可以不用{}（大括号将多条语句合并成一个复合语句）</p>
+<h3 id="（2）：双分支"><a href="#（2）：双分支" class="headerlink" title="（2）：双分支"></a>（2）：双分支</h3><p>基本语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if(条件表达式)&#123;</span><br><span class="line">    执行代码块1;</span><br><span class="line">&#125;</span><br><span class="line">else&#123;</span><br><span class="line">    执行代码块2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="说明：-1"><a href="#说明：-1" class="headerlink" title="说明："></a>说明：</h3><p>当条件表达式成立，即执行代码块1，否则执行代码块2</p>
+<h3 id="（3）：多分支"><a href="#（3）：多分支" class="headerlink" title="（3）：多分支"></a>（3）：多分支</h3><p>基本语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">if(条件表达式1)&#123;</span><br><span class="line">    执行代码块1;</span><br><span class="line">&#125;</span><br><span class="line">else if(条件表达式2)&#123;</span><br><span class="line">    执行代码块2;</span><br><span class="line">&#125;</span><br><span class="line">else if(条件表达式3)&#123;</span><br><span class="line">    执行代码块3;</span><br><span class="line">&#125;</span><br><span class="line">....</span><br><span class="line">else&#123;</span><br><span class="line">    执行代码块n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="说明：-2"><a href="#说明：-2" class="headerlink" title="说明："></a>说明：</h3><p>说明（1）：前面的表达式不成立，才轮到对后面的表达式进行判断<br>说明（2）：一旦有一个表达式成立，执行完代码块中相应的语句后就结束这个分支，进入后续的代码<br>说明（3）：当所有表达式都不成立时，则执行else的代码块<br>说明（4）：多分支可以没有else</p>
+<h2 id="（3）switch分支结构"><a href="#（3）switch分支结构" class="headerlink" title="（3）switch分支结构"></a>（3）switch分支结构</h2><h3 id="基本语法："><a href="#基本语法：" class="headerlink" title="基本语法："></a>基本语法：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">switch(表达式)&#123;</span><br><span class="line">    case 常量1:     (case和常量1之间有一个空格)</span><br><span class="line">    语句块1;</span><br><span class="line">    break;</span><br><span class="line"></span><br><span class="line">    case 常量2:     (case和常量2之间有一个空格)</span><br><span class="line">    语句块2;</span><br><span class="line">    break;</span><br><span class="line">    ....</span><br><span class="line">    default:        (default=默认)</span><br><span class="line">    default语句块;</span><br><span class="line">    break;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="说明：-3"><a href="#说明：-3" class="headerlink" title="说明："></a>说明：</h3><p>说明（1）：表达式对应一个值<br>说明（2）：case 常量1：当表达式的值等于常量1，就执行语句块1<br>说明（3）：break：表示退出switch，如果不加break，就会沿着语句块一路运行下去<br>说明（4）：如果表达式的值和常量1相等，就执行语句块1，如果不相等，就继续与常量2进行匹配<br>说明（5）：如果一个case都没有匹配上，则执行default语句块</p>
+<h3 id="细节："><a href="#细节：" class="headerlink" title="细节："></a>细节：</h3><ol>
+<li>细节（1）：表达式数据类型，应该和case后的常量类型一致，或者表达式的数据类型可以通过自动转换编程常量的数据类型</li>
+<li>细节（2）：switch(表达式)中表达式的返回值必须是：***[byte,short,int,char,String,enum]***</li>
+<li>细节（3）：case中的值必须是常量（或常量表达式），不能是变量</li>
+<li>default语句是可选的，当case语句全都不匹配时，执行default</li>
+<li>break语句用于执行完一个case分支后跳出switch语句块，如果没有写break，程序会顺序执行到switch结尾</li>
+</ol>
+<h2 id="4-for循环："><a href="#4-for循环：" class="headerlink" title="(4)for循环："></a>(4)for循环：</h2><h3 id="基本语法：-1"><a href="#基本语法：-1" class="headerlink" title="基本语法："></a>基本语法：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(循环变量初始化;循环条件;循环变量迭代)&#123;</span><br><span class="line">    循环操作(语句);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="细节"><a href="#细节" class="headerlink" title="细节"></a>细节</h3><ol>
+<li>for循环执行顺序：（1）：循环变量初始化[只在for循环刚开始时执行一次]<br>（2）：判断循环条件<br>（3）：执行语句<br>（4）：循环变量迭代——–&gt;(2)(3)(4)  </li>
+<li>循环条件是返回一个布尔值的表达式</li>
+<li>for(;循环判断条件;)中的初始化和变量迭代可以写到其他地方，但是两边的分号不能省略<br><em><strong>在for()内声明的循环变量作用域只在for语句中</strong></em></li>
+<li>循环初始值可以有多条初始化语句，但要求类型一样，并且中间用逗号隔开（可以声明多个循环变量）。循环变量的迭代也可以有多条变量迭代语句，中间用逗号隔开。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int count = 3;</span><br><span class="line">for(int i = 0,j = 0;i &lt; count ;i++,j+=2)&#123;</span><br><span class="line">    ....</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><code>for(;;)&#123;&#125;</code>无限循环</li>
+</ol>
+<h2 id="5-while循环"><a href="#5-while循环" class="headerlink" title="(5)while循环"></a>(5)while循环</h2><h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">循环变量初始化;</span><br><span class="line">while(循环条件)&#123;</span><br><span class="line">    循环体(语句);</span><br><span class="line">    循环变量迭代;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="细节-1"><a href="#细节-1" class="headerlink" title="细节"></a>细节</h3><ol>
+<li>细节（1）：循环条件是返回一个布尔值的表达式</li>
+<li>细节（2）：while循环是先判断再执行语句</li>
+</ol>
+<h2 id="（6）do-while循环"><a href="#（6）do-while循环" class="headerlink" title="（6）do-while循环"></a>（6）do-while循环</h2><h3 id="基本语法-1"><a href="#基本语法-1" class="headerlink" title="基本语法"></a>基本语法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">循环变量初始化;</span><br><span class="line">do&#123;</span><br><span class="line">    循环体(语句);</span><br><span class="line">    循环变量迭代;</span><br><span class="line">&#125;while(循环条件);</span><br></pre></td></tr></table></figure>
+<h3 id="细节-2"><a href="#细节-2" class="headerlink" title="细节"></a>细节</h3><ol>
+<li>细节（1）：和while语句不同do-while语句<em><strong>先执行再判断</strong></em>（判断是否继续执行）也就是说<em><strong>至少执行一次</strong></em></li>
+<li>细节（2）：最后有一个分号;</li>
+<li>细节（3）：循环条件是返回一个布尔值的表达式</li>
+<li>细节（4）：和while语句相比只是少了对第一次语句执行的判断</li>
+</ol>
+<h2 id="7-跳转控制语句break"><a href="#7-跳转控制语句break" class="headerlink" title="(7)跳转控制语句break"></a>(7)跳转控制语句break</h2><h3 id="基本介绍："><a href="#基本介绍：" class="headerlink" title="基本介绍："></a>基本介绍：</h3><p>break语句用于终止某个语句块的执行，一般使用在switch或者循环中</p>
+<h3 id="细节：-1"><a href="#细节：-1" class="headerlink" title="细节："></a>细节：</h3><ol>
+<li>细节（1）：在for循环中，break语句结束循环时，不会进行循环变量的自增&#x2F;自减</li>
+<li>break语句出现在多层嵌套的语句块中时，可以通过标签指明要终止的是哪一层的语句块</li>
+<li>标签的基本使用<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">lable1:</span><br><span class="line">for(int j=0;j&lt;4;j++)&#123;</span><br><span class="line">    lable2:</span><br><span class="line">    for(int i=0;i&lt;10;i++)&#123;</span><br><span class="line">        if(i==2)&#123;</span><br><span class="line">            break lable1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>label1是标签，可以任意写</li>
+<li>如果没有指定break，默认退出最近的循环体</li>
+<li>break后指定到哪个标签就退出哪个循环</li>
+<li>尽量少用标签（可读性差）</li>
+</ol>
+<h2 id="8-跳转控制语句continue"><a href="#8-跳转控制语句continue" class="headerlink" title="(8)跳转控制语句continue"></a>(8)跳转控制语句continue</h2><h3 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h3><ol>
+<li>continue语句用于结束本次循环，继续执行下一次循环</li>
+<li>continue语句出现在多层嵌套的循环语句体中时，可以通过标签指明要跳过的是哪一层循环。<em><strong>和前面的break的标签使用规则相同</strong></em></li>
+</ol>
+<h3 id="细节-3"><a href="#细节-3" class="headerlink" title="细节"></a>细节</h3><ol>
+<li>for循环中如果执行了continue语句，还是会进行变量的自增&#x2F;自减</li>
+</ol>
+<h2 id="9-跳转控制语句return"><a href="#9-跳转控制语句return" class="headerlink" title="(9)跳转控制语句return"></a>(9)跳转控制语句return</h2><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>return使用在方法上，表示跳出所在的方法。（如果return写在main方法，退出程序）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/22/Java-learning-note-4/" data-id="clp9mc47t0003xf1gfecg50ep" data-title="Java_learning_note_4" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/22/Java-learning-note-5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Java_learning_note_5
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/22/Java-learning-note-3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Java_learning_note_3</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/22/Java-learning-note-6/">Java_learning_note_6</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/22/Java-learning-note-5/">Java_learning_note_5</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/22/Java-learning-note-4/">Java_learning_note_4</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/22/Java-learning-note-3/">Java_learning_note_3</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/22/Java-learning-note-2/">Java_learning_note_2</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

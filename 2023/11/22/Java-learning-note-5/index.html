@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Java_learning_note_5 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Chapter_05:数组，排序，查找（1）：数组数组介绍：数组可以存放多个同一类型的数据。数组也是一种数据类型，是引用类型。 数组的使用方式（1）：动态初始化 数组的定义  （在声明的同时创建数组）数据类型 数组名[] &#x3D; new 数据类型[大小]例如int a[] &#x3D; new int[5]意为创建了一个名为a的数组，可以存放五个int类型的） 数组的引用（引用其中的元素&#x2F;值）数组名[">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java_learning_note_5">
+<meta property="og:url" content="http://example.com/2023/11/22/Java-learning-note-5/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Chapter_05:数组，排序，查找（1）：数组数组介绍：数组可以存放多个同一类型的数据。数组也是一种数据类型，是引用类型。 数组的使用方式（1）：动态初始化 数组的定义  （在声明的同时创建数组）数据类型 数组名[] &#x3D; new 数据类型[大小]例如int a[] &#x3D; new int[5]意为创建了一个名为a的数组，可以存放五个int类型的） 数组的引用（引用其中的元素&#x2F;值）数组名[">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/image.png">
+<meta property="article:published_time" content="2023-11-22T10:20:58.000Z">
+<meta property="article:modified_time" content="2023-11-22T10:24:14.102Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/image.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Java-learning-note-5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/22/Java-learning-note-5/" class="article-date">
+  <time class="dt-published" datetime="2023-11-22T10:20:58.000Z" itemprop="datePublished">2023-11-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Java_learning_note_5
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Chapter-05-数组，排序，查找"><a href="#Chapter-05-数组，排序，查找" class="headerlink" title="Chapter_05:数组，排序，查找"></a><em><strong>Chapter</strong></em>_05:数组，排序，查找</h1><h2 id="（1）：数组"><a href="#（1）：数组" class="headerlink" title="（1）：数组"></a>（1）：数组</h2><h3 id="数组介绍："><a href="#数组介绍：" class="headerlink" title="数组介绍："></a>数组介绍：</h3><p>数组可以存放多个同一类型的数据。数组也是一种数据类型，是引用类型。</p>
+<h3 id="数组的使用方式（1）：动态初始化"><a href="#数组的使用方式（1）：动态初始化" class="headerlink" title="数组的使用方式（1）：动态初始化"></a>数组的使用方式（1）：动态初始化</h3><ol>
+<li><em><strong>数组的定义</strong></em>  （在声明的同时创建数组）<br><code>数据类型 数组名[] = new 数据类型[大小]</code><br>例如<code>int a[] = new int[5]</code>意为创建了一个名为a的数组，可以存放五个int类型的）</li>
+<li>数组的引用（引用其中的元素&#x2F;值）<br><code>数组名[下标]</code><br>例如<code>a[2]</code>意为使用a数组的第三个元素</li>
+</ol>
+<h3 id="数组的使用方式（2）：动态初始化"><a href="#数组的使用方式（2）：动态初始化" class="headerlink" title="数组的使用方式（2）：动态初始化"></a>数组的使用方式（2）：动态初始化</h3><p><em><strong>数组的定义</strong></em>（先声明数组，再创建数组）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">先声明数组：数据类型 数组名[]; 或 数据类型[] 数组名</span><br><span class="line">即 int a[]; 或 int[] a;(这时候内存中没有为a这个变量开辟空间)</span><br><span class="line"></span><br><span class="line">再创建数组：数组名=new 数据类型[大小];</span><br><span class="line">即 a=new int[10];（分配了内存空间，可以存放数据）</span><br></pre></td></tr></table></figure>
+<h3 id="数组的使用方式（3）：静态初始化"><a href="#数组的使用方式（3）：静态初始化" class="headerlink" title="数组的使用方式（3）：静态初始化"></a>数组的使用方式（3）：静态初始化</h3><p><em><strong>初始化数组</strong></em>：<br><code>数据类型 数组名[]=&#123;元素值,元素值,元素值,&#125;</code><br><code>数据类型[] 数组名=&#123;元素值,元素值,元素值,&#125;</code><br><code>String strs[]=new String[]&#123;&quot;a&quot;,&quot;b&quot;,&quot;c&quot;&#125;;</code></p>
+<h3 id="细节："><a href="#细节：" class="headerlink" title="细节："></a>细节：</h3><ol>
+<li>（1）：数组元素的默认值，如<code>int a[]=new int[3]</code>在未对数组元素进行赋值时，  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">int数组则元素默认值为0</span><br><span class="line">short-------0</span><br><span class="line">byte--------0</span><br><span class="line">long--------0</span><br><span class="line">float-------0.0</span><br><span class="line">double------0.0</span><br><span class="line">char--------\u0000（\u表示unicode码，Unicode码统一两个字节十六位，所以这里是16进制数[一个十六进制数等于四个二进制数]）</span><br><span class="line">boolean数组则元素默认值为false  </span><br><span class="line">String数组则元素默认值为nul</span><br></pre></td></tr></table></figure></li>
+<li>（2）：表示数组大小的数字可以换成变量<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int n=6;</span><br><span class="line">int a[]=new int[n];</span><br></pre></td></tr></table></figure></li>
+<li>（3）：在仅声明数组变量的语句中<code>int a[];</code>这时内存中没有为数组a开辟内存空间，此时的a为null</li>
+<li>（4）：使用数组的步骤  <blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>1：声明数组并开辟空间<br>2：给数组各个元素赋值<br>3：使用数组</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+<li>数组属于引用类型，数组型数据是对象</li>
+<li>数组下标必须在指定范围内使用，否则报：下标越界异常</li>
+<li>数组中的元素：满足自动类型转换。即double类型的数组可以存储int类型的元素（自动类型转换），而int类型的数组不可以存储double类型的元素</li>
+<li>数组中的元素可以是任何数据类型，包括基本类型和引用类型</li>
+</ol>
+<h2 id="（2）：数组赋值机制"><a href="#（2）：数组赋值机制" class="headerlink" title="（2）：数组赋值机制"></a>（2）：数组赋值机制</h2><p>基本数据类型赋值（值传递），这个值就是具体的数据，而且相互不影响。<code>int n1=2; int n2=n1; </code>即是将2赋给n1，再将n1的值赋给n2(n2的变化不会影响到n1)</p>
+<h3 id="数组在默认情况下是引用传递，赋的值是地址。（引用传递）"><a href="#数组在默认情况下是引用传递，赋的值是地址。（引用传递）" class="headerlink" title="数组在默认情况下是引用传递，赋的值是地址。（引用传递）"></a>数组在默认情况下是<em><strong>引用传递，赋的值是地址。</strong></em>（引用传递）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int[] array1=&#123;1,2,3&#125;;</span><br><span class="line">int[] array2=array1;</span><br></pre></td></tr></table></figure>
+<h3 id="理解：将array1数组指向的内存地址赋值给了array2，所以此时两个数组变量指向同一个内存空间。此时对array2进行修改，会影响到array1"><a href="#理解：将array1数组指向的内存地址赋值给了array2，所以此时两个数组变量指向同一个内存空间。此时对array2进行修改，会影响到array1" class="headerlink" title="理解：将array1数组指向的内存地址赋值给了array2，所以此时两个数组变量指向同一个内存空间。此时对array2进行修改，会影响到array1"></a>理解：将array1数组指向的内存地址赋值给了array2，所以此时两个数组变量指向同一个内存空间。此时对array2进行修改，会影响到array1</h3><h3 id="对-值传递和-引用传递-的深入研究"><a href="#对-值传递和-引用传递-的深入研究" class="headerlink" title="对 值传递和 引用传递 的深入研究"></a>对 值传递和 引用传递 的深入研究</h3><ol>
+<li>jvm中的内存分为三大块（1）：栈（2）：堆（3）：方法区</li>
+<li>对于值传递，在栈中<code>int n1=10; int n2=n1;</code><br>表现为<code>n1-&gt;[10],n2-&gt;[10]</code>将n1指向的10拷贝一份给n2（即n1和n2指向的是不同的内存空间）</li>
+<li>对于引用传递，在栈中<code>int[] arr1=&#123;1,2,3&#125;;</code>表现为<code>arr1--&gt;0x0011(一个地址)</code>该地址指向堆中的一个相应的空间来存储数组的元素。<br>当进行<code>int[] arr2=arr1;</code>时，在栈中，arr1把他的地址拷贝了一份传给arr2<code>arr2--&gt;0x0011</code><br>所以此时，<em><strong>两个数组变量指向同一个内存空间</strong></em><br><img src="/image.png" alt="Alt text"></li>
+</ol>
+<h2 id="（3）：数组拷贝（内容复制）"><a href="#（3）：数组拷贝（内容复制）" class="headerlink" title="（3）：数组拷贝（内容复制）"></a>（3）：数组拷贝（内容复制）</h2><p>遍历原数组的每一个元素的值，将其赋值给新数组的每个元素<br><em><strong>挨个挨个的传递</strong></em></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int a[]=&#123;1,2,3,4,5&#125;;</span><br><span class="line">int b[]=new int[a.length];</span><br><span class="line">for(int i=0;i&lt;a.length;i++)&#123;</span><br><span class="line">    b[i]=a[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="（4）：数组反转"><a href="#（4）：数组反转" class="headerlink" title="（4）：数组反转"></a>（4）：数组反转</h2><p>假设共有n个元素，</p>
+<h3 id="方法（1）："><a href="#方法（1）：" class="headerlink" title="方法（1）："></a>方法（1）：</h3><p><code> 将0和n-1呼唤，将1和n-2互换....</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for(int i=0;i&lt;=(array.length-1)/2;i++)&#123;</span><br><span class="line">    int temp=array[i];</span><br><span class="line">    array[i]=array[array.length-1-i];</span><br><span class="line">    array[array.length-1-i]=temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>对于array.length为奇数的情况，例如array.length&#x3D;5–&gt;0-4即中间下标为2（互换012和234）<br>对于array.length为偶数的情况,例如array.length&#x3D;6–&gt;0-5即中间下标为2（互换012和345）</p>
+<h3 id="方法（2）：反向拷贝后让原数组指向该数组"><a href="#方法（2）：反向拷贝后让原数组指向该数组" class="headerlink" title="方法（2）：反向拷贝后让原数组指向该数组"></a>方法（2）：反向拷贝后让原数组指向该数组</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int arr2[]=new int[arr1.length];</span><br><span class="line">for(int i=0;i&lt;arr1.length;i++)&#123;</span><br><span class="line">    arr2[i]=arr1[arr1.length-1-i];</span><br><span class="line">&#125;</span><br><span class="line">arr1=arr2;</span><br></pre></td></tr></table></figure>
+<p>将arr2指向的地址赋值给arr1，则arr1原来指向的内存地址（没人使用）存储的内容被垃圾回收机制回收</p>
+<h2 id="（5）：数组添加"><a href="#（5）：数组添加" class="headerlink" title="（5）：数组添加"></a>（5）：数组添加</h2><h3 id="要求：实现动态的给数组添加元素效果，实现对数组的扩容"><a href="#要求：实现动态的给数组添加元素效果，实现对数组的扩容" class="headerlink" title="要求：实现动态的给数组添加元素效果，实现对数组的扩容"></a>要求：实现动态的给数组添加元素效果，实现对数组的扩容</h3><ol>
+<li>原始数组使用静态分配<code>int a[]=&#123;1,2,3&#125;</code></li>
+<li>增加的元素，直接放在数组的最后 <code>a=&#123;1,2,3,4&#125;</code></li>
+<li>用户可以通过如下方法来决定是否继续添加，添加成功，是否继续?y&#x2F;n</li>
+</ol>
+<h3 id="数组扩容"><a href="#数组扩容" class="headerlink" title="数组扩容"></a><em><strong>数组扩容</strong></em></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">int a[]=&#123;1,2,3&#125;;</span><br><span class="line">Scanner scanner = new Scanner(System.in);</span><br><span class="line">while(true)&#123;</span><br><span class="line">    System.out.println(&quot;input the number what you will add to</span><br><span class="line">     the end of the array:&quot;);</span><br><span class="line"></span><br><span class="line">    int n=scanner.nextInt();</span><br><span class="line">    int arr[]= new int[a.length+1];</span><br><span class="line">    for(int i=0;i&lt;a.length;i++)&#123;</span><br><span class="line">        arr[i]=a[i];</span><br><span class="line">    &#125;</span><br><span class="line">    arr[arr.length-1]=n;</span><br><span class="line">    System.out.println(&quot;do you want to continue?y/n&quot;);</span><br><span class="line">    char reply=scanner.next().charAt(0);</span><br><span class="line">    a=arr;</span><br><span class="line">    if(reply==&#x27;n&#x27;)&#123;</span><br><span class="line">        break;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>创建一个新的数组，赋值原来数组的元素，并在末尾新增元素，最后把地址赋值给原数组</p>
+<h2 id="（6）：排序"><a href="#（6）：排序" class="headerlink" title="（6）：排序"></a>（6）：排序</h2><h3 id="排序介绍："><a href="#排序介绍：" class="headerlink" title="排序介绍："></a>排序介绍：</h3><p>排序是将一群数据，依指定的顺序进行排列的过程</p>
+<h3 id="排序的分类"><a href="#排序的分类" class="headerlink" title="排序的分类"></a>排序的分类</h3><ol>
+<li>（1）：内部排序：指将需要处理的所有数据都加载到内部存储器中进行排序。包括（交换式排序法，选择式排序法，插入式排序法）</li>
+<li>（2）：外部排序：数据量过大，无法全部加载到内存中，需要借助外部存储进行排序。包括（合并排序法，直接合并排序法）</li>
+</ol>
+<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a><em><strong>冒泡排序</strong></em></h3><p>把大的放到一边：<br>第一轮把最大的数放在最边缘<br>第二轮把剩下n-1个数中最大的放在第二个位置<br>….<br><em><strong>(第i轮确定第i大（小）的数在左起（右起）的第i个位置)</strong></em></p>
+<h3 id="冒泡排序优化："><a href="#冒泡排序优化：" class="headerlink" title="冒泡排序优化："></a>冒泡排序优化：</h3><p>还可以加上一个检索机制，如果在某一轮排序中，没有进行元素顺序的交换，就证明该组数据已经排序完成，则可以直接break。节省时间</p>
+<h2 id="（7）：查找"><a href="#（7）：查找" class="headerlink" title="（7）：查找"></a>（7）：查找</h2><h3 id="介绍："><a href="#介绍：" class="headerlink" title="介绍："></a>介绍：</h3><p>在Java中，常用的查找有两种：  </p>
+<ol>
+<li>顺序查找</li>
+<li>二分查找（放在算法里讲）（“夹逼法”）</li>
+</ol>
+<h3 id="顺序查找：遍历数组，每一个元素都进行比较"><a href="#顺序查找：遍历数组，每一个元素都进行比较" class="headerlink" title="顺序查找：遍历数组，每一个元素都进行比较"></a>顺序查找：遍历数组，每一个元素都进行比较</h3><h2 id="（8）：多维数组–二维数组"><a href="#（8）：多维数组–二维数组" class="headerlink" title="（8）：多维数组–二维数组"></a>（8）：多维数组–二维数组</h2><h3 id="介绍：以一维数组作为元素的数组。类比成x轴和y轴上的维度关系"><a href="#介绍：以一维数组作为元素的数组。类比成x轴和y轴上的维度关系" class="headerlink" title="介绍：以一维数组作为元素的数组。类比成x轴和y轴上的维度关系"></a>介绍：以一维数组作为元素的数组。类比成x轴和y轴上的维度关系</h3><h3 id="二维数组的使用方式（1）–动态初始化"><a href="#二维数组的使用方式（1）–动态初始化" class="headerlink" title="二维数组的使用方式（1）–动态初始化"></a>二维数组的使用方式（1）–动态初始化</h3><p>语法  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">类型[][] 数组名=new 类型[大小][大小] 或 </span><br><span class="line">类型 数组名[][]=new 类型[大小][大小]   </span><br><span class="line">```  </span><br><span class="line">例如`int a[][]=new int[2][3]`</span><br><span class="line">### 二维数组的使用方式（2）--动态初始化</span><br><span class="line">语法  </span><br></pre></td></tr></table></figure>
+<p>–先声明–<br>类型 数组名[][];<br>类型[][] 数组名;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">--再定义（开辟空间）--</span><br><span class="line">数组名=new 类型[大小][大小];</span><br></pre></td></tr></table></figure>
+<h3 id="二维数组的使用方式（3）–动态初始化-列数不确定"><a href="#二维数组的使用方式（3）–动态初始化-列数不确定" class="headerlink" title="二维数组的使用方式（3）–动态初始化-列数不确定"></a>二维数组的使用方式（3）–动态初始化-列数不确定</h3><p><code>int a[][]=new int[3][]</code><br>后面一维数组的长度可以先不写(先创建二维数组【开了空间啊】，声明一维数组【没开空间】)<br><code>a[i] = new int[i+1]</code><br>(再开辟空间)</p>
+<h3 id="二维数组的使用方式（4）–静态初始化"><a href="#二维数组的使用方式（4）–静态初始化" class="headerlink" title="二维数组的使用方式（4）–静态初始化"></a>二维数组的使用方式（4）–静态初始化</h3><p>&#96;类型 数组名[][]&#x3D;</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/22/Java-learning-note-5/" data-id="clp9mc47u0004xf1ghmx77ry2" data-title="Java_learning_note_5" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/22/Java-learning-note-6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Java_learning_note_6
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/22/Java-learning-note-4/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Java_learning_note_4</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/22/Java-learning-note-6/">Java_learning_note_6</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/22/Java-learning-note-5/">Java_learning_note_5</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/22/Java-learning-note-4/">Java_learning_note_4</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/22/Java-learning-note-3/">Java_learning_note_3</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/22/Java-learning-note-2/">Java_learning_note_2</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

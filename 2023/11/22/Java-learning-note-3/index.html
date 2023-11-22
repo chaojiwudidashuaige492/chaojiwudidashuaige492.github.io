@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Java_learning_note_3 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Chapter_03运算符(1). 算术运算符1. 一元运算符 正号”+”:  +7—&gt;7 负号”-“:  b&#x3D;11,-b—&gt;-11  2. 二元运算符： 加”+”:  9+9—&gt;18 减”-“:  10-8—&gt;2 乘”“:  78—&gt;56 除”&#x2F;“:  9&#x2F;9—&gt;1 取余”%”  11%9–&gt;1可以用于浮点数（浮点数计算公式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java_learning_note_3">
+<meta property="og:url" content="http://example.com/2023/11/22/Java-learning-note-3/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Chapter_03运算符(1). 算术运算符1. 一元运算符 正号”+”:  +7—&gt;7 负号”-“:  b&#x3D;11,-b—&gt;-11  2. 二元运算符： 加”+”:  9+9—&gt;18 减”-“:  10-8—&gt;2 乘”“:  78—&gt;56 除”&#x2F;“:  9&#x2F;9—&gt;1 取余”%”  11%9–&gt;1可以用于浮点数（浮点数计算公式">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-11-22T10:20:48.000Z">
+<meta property="article:modified_time" content="2023-11-22T10:23:08.821Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Java-learning-note-3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/22/Java-learning-note-3/" class="article-date">
+  <time class="dt-published" datetime="2023-11-22T10:20:48.000Z" itemprop="datePublished">2023-11-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Java_learning_note_3
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Chapter-03运算符"><a href="#Chapter-03运算符" class="headerlink" title="Chapter_03运算符"></a><em><strong>Chapter_03运算符</strong></em></h1><h2 id="1-算术运算符"><a href="#1-算术运算符" class="headerlink" title="(1). 算术运算符"></a>(1). 算术运算符</h2><h3 id="1-一元运算符"><a href="#1-一元运算符" class="headerlink" title="1. 一元运算符"></a>1. 一元运算符</h3><ol>
+<li>正号”+”:  +7—&gt;7</li>
+<li>负号”-“:  b&#x3D;11,-b—&gt;-11</li>
+</ol>
+<h3 id="2-二元运算符："><a href="#2-二元运算符：" class="headerlink" title="2. 二元运算符："></a>2. 二元运算符：</h3><ol>
+<li>加”+”:  9+9—&gt;18</li>
+<li>减”-“:  10-8—&gt;2</li>
+<li>乘”<em>“:  7</em>8—&gt;56</li>
+<li>除”&#x2F;“:  9&#x2F;9—&gt;1</li>
+<li>取余”%”  11%9–&gt;1<em><strong>可以用于浮点数</strong></em>（浮点数计算公式 : a%b &#x3D; a - (int)a&#x2F;b * b）</li>
+</ol>
+<h3 id="3-自增-减运算符"><a href="#3-自增-减运算符" class="headerlink" title="3. 自增&#x2F;减运算符"></a>3. 自增&#x2F;减运算符</h3><ol>
+<li>自增(前):先加上，再取值</li>
+<li>自减(前):先减去，再取值</li>
+<li>自增(后):先取值，后加上</li>
+<li>自减(后):先取值，后减去</li>
+</ol>
+<h3 id="4-字符串相加-”-”—-拼接字符串"><a href="#4-字符串相加-”-”—-拼接字符串" class="headerlink" title="4. 字符串相加:”+”—-拼接字符串"></a>4. 字符串相加:”+”—-拼接字符串</h3><h3 id="5-细节说明"><a href="#5-细节说明" class="headerlink" title="5.细节说明"></a>5.<em><strong>细节说明</strong></em></h3><ol>
+<li>“\“除法的使用；<br>（1）整数&#x2F;整数&#x3D;整数，小数部分会被舍去<br>（2）a&#x2F;b，其中任意一个为浮点数，结果都为浮点数<br><code>double n1 = 10/4</code> n1 &#x3D; 2.0(先计算右边再赋值给左边)</li>
+<li>“%”取余运算的使用：<br>（1）关键公式：<em><strong>a % b &#x3D; a - a &#x2F; b * b</strong></em></li>
+<li>自增&#x2F;自减  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int k = j++; ---&gt;k=j;j = j + 1;</span><br><span class="line">int k = ++j; ---&gt;j = j + 1;k = j;</span><br></pre></td></tr></table></figure>
+(–同理)</li>
+</ol>
+<h2 id="算术运算符面试题"><a href="#算术运算符面试题" class="headerlink" title="算术运算符面试题:"></a>算术运算符面试题:</h2><p>1. </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> i=<span class="number">1</span>;</span><br><span class="line">i=i++;</span><br><span class="line">System.out.println(i);</span><br></pre></td></tr></table></figure>
+<p>输出的值为“1”<br><em><strong>原理如下</strong></em><br>（1）：先将右边的i的值放入栈中（2）：右边的i进行自增（3）：将栈中的i的值赋给左边的i<br>表现在j&#x3D;i++中极为把i自增前的值赋值给j<br>2. </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> i=<span class="number">1</span>;</span><br><span class="line">i=++i;</span><br><span class="line">System.out.println(i);</span><br></pre></td></tr></table></figure>
+<p>输出的值为“2”<br><em><strong>原理如下</strong></em>（1）：右边的i进行自增（2）：将右边的i的值放入栈中（3）：将栈中的值赋给左边</p>
+<h2 id="2-关系运算符-比较运算符"><a href="#2-关系运算符-比较运算符" class="headerlink" title="(2).关系运算符(比较运算符)"></a>(2).关系运算符(比较运算符)</h2><h3 id="介绍：关系运算符的结果都是boolean型，要么是true要么是false"><a href="#介绍：关系运算符的结果都是boolean型，要么是true要么是false" class="headerlink" title="介绍：关系运算符的结果都是boolean型，要么是true要么是false"></a>介绍：关系运算符的结果都是boolean型，要么是true要么是false</h3><h3 id="总览："><a href="#总览：" class="headerlink" title="总览："></a>总览：</h3><ol>
+<li>&#x3D;&#x3D; 相等于</li>
+<li>!&#x3D; 不等于</li>
+<li>&lt; 小于</li>
+<li><blockquote>
+<p>大于</p>
+</blockquote>
+</li>
+<li>&lt;&#x3D; 小于等于</li>
+<li><blockquote>
+<p>&#x3D; 大于等于</p>
+</blockquote>
+</li>
+<li>instanceof 检查是否是类的对象<br><code>&quot;lcx&quot; instanceof String ---&gt;true</code>(instance&#x3D;实例)</li>
+</ol>
+<h2 id="3-逻辑运算符"><a href="#3-逻辑运算符" class="headerlink" title="(3).逻辑运算符"></a>(3).逻辑运算符</h2><h3 id="介绍：用于连接多个条件-多个关系表达式-，最终的结果也是一个boolean值"><a href="#介绍：用于连接多个条件-多个关系表达式-，最终的结果也是一个boolean值" class="headerlink" title="介绍：用于连接多个条件(多个关系表达式)，最终的结果也是一个boolean值"></a>介绍：用于连接多个条件(多个关系表达式)，最终的结果也是一个boolean值</h3><h3 id="总览：-1"><a href="#总览：-1" class="headerlink" title="总览："></a>总览：</h3><ol>
+<li>&amp; 逻辑与–都为true才是true</li>
+<li>| 逻辑或 –都为false才是false</li>
+<li>^ 逻辑异或–相同为false，不同为true</li>
+<li>&amp;&amp; 短路与–都为true才是true</li>
+<li>|| 短路或–都为false才是false</li>
+<li>! 取反–true变false，false变true</li>
+</ol>
+<h3 id="细节："><a href="#细节：" class="headerlink" title="细节："></a>细节：</h3><ol>
+<li>逻辑与和短路与：<br>（1）：逻辑与：先算出运算符两边的bool值，再得出结果<br>（2）：短路与：先算出左边的bool值，如果为false那么跳过运行右边的表达式，直接得出false的结果（效率高）</li>
+<li>逻辑或和短路或：<br>（1）：逻辑或：先算出运算符两边的bool值，再得出结果<br>（2）：短路或：先算出左边的bool值，如果为true那么跳过运行右边的表达式，直接得出true的结果（效率高）</li>
+</ol>
+<h2 id="4-赋值运算符"><a href="#4-赋值运算符" class="headerlink" title="(4).赋值运算符"></a>(4).赋值运算符</h2><h3 id="介绍：赋值运算符就是将某个运算后的值，赋给指定的变量"><a href="#介绍：赋值运算符就是将某个运算后的值，赋给指定的变量" class="headerlink" title="介绍：赋值运算符就是将某个运算后的值，赋给指定的变量"></a>介绍：赋值运算符就是将某个运算后的值，赋给指定的变量</h3><h3 id="总览：-2"><a href="#总览：-2" class="headerlink" title="总览："></a>总览：</h3><ol>
+<li>+&#x3D;  a+&#x3D;b–a&#x3D;a&#x3D;b</li>
+<li>-&#x3D;  a-&#x3D;b–a&#x3D;a-b</li>
+<li><em>&#x3D;  a</em>&#x3D;b–a&#x3D;a*b</li>
+<li>&#x2F;&#x3D;  a&#x2F;&#x3D;b–a&#x3D;a&#x2F;b</li>
+<li>%&#x3D;  a%&#x3D;b–a&#x3D;a%b</li>
+</ol>
+<h3 id="细节：-1"><a href="#细节：-1" class="headerlink" title="细节："></a>细节：</h3><ol>
+<li>先计算右边，再赋值给左边</li>
+<li>赋值运算符的左边只能是变量</li>
+<li>复合赋值运算符会进行<em><strong>类型转换</strong></em><br><code>byte b=1;b+=3;</code>b仍然为byte类型<br>即为<code>b = (byte)(b + 3);</code><br>而直接写b &#x3D; b+3则会报错</li>
+<li>自增自减运算符同样满足类型转换，即<br><code>b++,b=(byte)(b+1)</code></li>
+</ol>
+<h2 id="5-三元运算符（条件判断运算符）"><a href="#5-三元运算符（条件判断运算符）" class="headerlink" title="(5).三元运算符（条件判断运算符）"></a>(5).三元运算符（条件判断运算符）</h2><h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法:"></a>基本语法:</h3><p><code>条件表达式?表达式1:表达式2;</code></p>
+<h3 id="如果表达式的值为true，运算后的结果为表达式1-（只对表达式1进行判断，并返回表达式1的值）"><a href="#如果表达式的值为true，运算后的结果为表达式1-（只对表达式1进行判断，并返回表达式1的值）" class="headerlink" title="如果表达式的值为true，运算后的结果为表达式1.（只对表达式1进行判断，并返回表达式1的值）"></a>如果表达式的值为true，运算后的结果为表达式1.（只对表达式1进行判断，并返回表达式1的值）</h3><h3 id="如果表达式的值为false，运算后的结果为表达式2-（只对表达式2进行判断，并返回表达式2的值）"><a href="#如果表达式的值为false，运算后的结果为表达式2-（只对表达式2进行判断，并返回表达式2的值）" class="headerlink" title="如果表达式的值为false，运算后的结果为表达式2.（只对表达式2进行判断，并返回表达式2的值）"></a>如果表达式的值为false，运算后的结果为表达式2.（只对表达式2进行判断，并返回表达式2的值）</h3><h3 id="使用细节"><a href="#使用细节" class="headerlink" title="使用细节"></a>使用细节</h3><p>表达式1和表达式2要为可以赋给接受变量的类型（或者可以通过自动转换赋值给变量的类型）</p>
+<h2 id="6-位运算符（符号）"><a href="#6-位运算符（符号）" class="headerlink" title="(6).位运算符（符号）"></a>(6).位运算符（符号）</h2><h3 id="总览：-3"><a href="#总览：-3" class="headerlink" title="总览："></a>总览：</h3><ol>
+<li>&amp; 按位与 ：两位全为1，结果为1，否则为0</li>
+<li>| 按位或 ：两位有一个为1，结果为1，否则为0</li>
+<li>^ 按位异或 ： 两位一个为1一个为0，结果为1，否则为0</li>
+<li>~ 按位取反 ： 0–&gt;1,1–&gt;0</li>
+<li>&gt;&gt; 算术右移 ：低位溢出，符号位不变，并用符号位补齐空余的高位<br><em><strong>换算成10进制相当于除2</strong></em></li>
+<li>&lt;&lt; 算术左移 ：符号位不变，低位补0<br><em><strong>换算成10进制相当于乘2</strong></em></li>
+<li>&gt;&gt;&gt; 逻辑右移（无符号右移） ： 低位溢出，高位补0（区别于算术右移）<em><strong>（没有&lt;&lt;&lt;符号）</strong></em></li>
+</ol>
+<h3 id="细节：-2"><a href="#细节：-2" class="headerlink" title="细节："></a>细节：</h3><ol>
+<li>&gt;&gt;与&lt;&lt;：<code>int a=1&gt;&gt;2;</code>表示算术右移两位<br><code>int c=1&lt;&lt;2;</code>表示算术左移两位</li>
+</ol>
+<h2 id="7-位运算符（进制）"><a href="#7-位运算符（进制）" class="headerlink" title="(7).位运算符（进制）"></a>(7).位运算符（进制）</h2><h3 id="进制总览："><a href="#进制总览：" class="headerlink" title="进制总览："></a>进制总览：</h3><ol>
+<li>二进制：0，1.满2进1，以<em><strong>0b或0B开头</strong></em>(binary)</li>
+<li>十进制：0-9.满10进1</li>
+<li>八进制：0-7.满8进1，以<em><strong>数字0开头</strong></em></li>
+<li>十六进制：0-9以及A(10)-F(15).满16进1，以<em><strong>0x或0X开头</strong></em>，此处的A-F不区分大小写(hexadecimal)</li>
+</ol>
+<h3 id="进制转换-十进制转其他进制-："><a href="#进制转换-十进制转其他进制-：" class="headerlink" title="进制转换(十进制转其他进制)："></a>进制转换(十进制转其他进制)：</h3><p><em><strong>原理</strong></em><br>(以34为例)：<br>17(被2除1次) 0(被2除0次)&#x2F;&#x2F;<br>8(被2除2次) 1(被2除1次)&#x2F;&#x2F;<br>4(被2除3次) 0(被2除2次)&#x2F;&#x2F;<br>2(被2除4次) 0(被2除3次)&#x2F;&#x2F;<br>1(被2除5次) 0(被2除4次)&#x2F;&#x2F;<br>0(被2除6次) 1(被2除5次).<br>结果为：100010—-&gt;1 * 2^5 + 1 * 2^1</p>
+<ol>
+<li>十进制转换成二进制：将该数不断除2，直到商为0，然后将每步得到的余数倒过来</li>
+<li>十进制转换成八进制：将该数不断除8，直到商为0，然后将每步得到的余数倒过来</li>
+<li>十进制转换成十六进制：将该数不断除16，直到商为0，然后将每步得到的余数倒过来</li>
+</ol>
+<h3 id="进制转换-二进制转其他进制"><a href="#进制转换-二进制转其他进制" class="headerlink" title="进制转换(二进制转其他进制)"></a>进制转换(二进制转其他进制)</h3><ol>
+<li>二进制转八进制：从低位开始，将二进制每三位结合成一组，转成对应的八进制数(2^3&#x3D;8)</li>
+<li>二进制转十六进制：从低位开始，将二进制每四位结合成一组，转成对应的十六进制数(2^4&#x3D;16)</li>
+</ol>
+<h3 id="进制转换-其他进制转成二进制"><a href="#进制转换-其他进制转成二进制" class="headerlink" title="进制转换(其他进制转成二进制)"></a>进制转换(其他进制转成二进制)</h3><ol>
+<li>八进制转换成二进制：从低位开始，将八进制数的每一位，转成对应的一个3位的二进制数</li>
+<li>十六进制转换成二进制：从低位开始，将十六进制数的每一位，转成对应的一个4位的二进制数</li>
+</ol>
+<h2 id="8-位运算符-原码，反码，补码"><a href="#8-位运算符-原码，反码，补码" class="headerlink" title="(8).位运算符(原码，反码，补码)"></a>(8).位运算符(原码，反码，补码)</h2><ol>
+<li>二进制的最高位是符号位:0表示正数，1表示负数</li>
+<li>正数的原码，反码，补码都一样</li>
+<li>负数的反码&#x3D;它的原码符号位不变，其他位取反(0–&gt;1,1–&gt;0)</li>
+<li>负数的补码&#x3D;它的反码+1&#x2F;&#x2F;同理&#x2F;&#x2F;负数的反码&#x3D;它的补码-1</li>
+<li>0的反码，补码都是0</li>
+<li>java没有无符号数，Java中的数都是有符号的</li>
+<li>在计算机运算的时候，<em><strong>都是以补码的方式来运算的</strong></em>（无论什么运算都是）（且补码运算得到的结果也为补码，要转回原码才能得出准确答案）</li>
+<li>当我们看运算结果的时候，要看他的原码<br>举例（1）：<code>2&amp;3</code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">2的原码等于补码：00000010（省去前三个字节）</span><br><span class="line">3的原码等于补码：00000011（省去前三个字节）</span><br><span class="line">按位与计算得到：00000010（这里得到的是补码）</span><br><span class="line">在看运算结果时，关注的是原码，因为本例中，符号位为0，是一个正数--&gt;正数的原码等于补码</span><br><span class="line">所以结果为00000010=2</span><br></pre></td></tr></table></figure>
+举例（2）<code>~-2</code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">运算都是对补码进行操作的，负数的补码等于负数的反码+1</span><br><span class="line">-2的原码：10000000 00000000 00000000 00000010</span><br><span class="line">-2的反码：11111111 11111111 11111111 11111101（除了符号位，其余位1--&gt;0,0--&gt;1）</span><br><span class="line">-2的补码：11111111 11111111 11111111 11111110（反码+1）</span><br><span class="line">~-2：00000000 00000000 00000000 00000001</span><br><span class="line">运算结果看原码：符号位为0，正数的原码等于补码</span><br><span class="line">所以~-2=1</span><br></pre></td></tr></table></figure>
+举例（3）<code>~2</code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">正数的补码等于原码</span><br><span class="line">2的补码：00000000 00000000 00000000 00000010</span><br><span class="line">~2：11111111 11111111 11111111 11111101（得到的是补码）</span><br><span class="line">看源码，因为符号位为1，所以要先转为反码，再变回原码</span><br><span class="line">~2的反码：11111111 11111111 11111111 11111100（补码-1）</span><br><span class="line">~2的原码：10000000 00000000 00000000 00000011（反码符号位不变，其他位取反）</span><br><span class="line">~2=-3</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/22/Java-learning-note-3/" data-id="clp9mc47t0002xf1ghi0tfgn4" data-title="Java_learning_note_3" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/22/Java-learning-note-4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Java_learning_note_4
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/22/Java-learning-note-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Java_learning_note_2</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/22/Java-learning-note-6/">Java_learning_note_6</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/22/Java-learning-note-5/">Java_learning_note_5</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/22/Java-learning-note-4/">Java_learning_note_4</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/22/Java-learning-note-3/">Java_learning_note_3</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/22/Java-learning-note-2/">Java_learning_note_2</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
