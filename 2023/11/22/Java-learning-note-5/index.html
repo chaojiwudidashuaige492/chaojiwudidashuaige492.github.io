@@ -13,12 +13,12 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Chapter_05:数组，排序，查找（1）：数组数组介绍：数组可以存放多个同一类型的数据。数组也是一种数据类型，是引用类型。 数组的使用方式（1）：动态初始化 数组的定义  （在声明的同时创建数组）数据类型 数组名[] &#x3D; new 数据类型[大小]例如int a[] &#x3D; new int[5]意为创建了一个名为a的数组，可以存放五个int类型的） 数组的引用（引用其中的元素&#x2F;值）数组名[">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/.com//image-1.jpg">
+<meta property="og:image" content="http://example.com/images/image-1.jpg">
 <meta property="article:published_time" content="2023-11-22T10:20:58.000Z">
-<meta property="article:modified_time" content="2023-11-22T12:15:12.364Z">
+<meta property="article:modified_time" content="2023-11-22T14:04:59.420Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/.com//image-1.jpg">
+<meta name="twitter:image" content="http://example.com/images/image-1.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -131,7 +131,7 @@
 <h3 id="理解：将array1数组指向的内存地址赋值给了array2，所以此时两个数组变量指向同一个内存空间。此时对array2进行修改，会影响到array1"><a href="#理解：将array1数组指向的内存地址赋值给了array2，所以此时两个数组变量指向同一个内存空间。此时对array2进行修改，会影响到array1" class="headerlink" title="理解：将array1数组指向的内存地址赋值给了array2，所以此时两个数组变量指向同一个内存空间。此时对array2进行修改，会影响到array1"></a>理解：将array1数组指向的内存地址赋值给了array2，所以此时两个数组变量指向同一个内存空间。此时对array2进行修改，会影响到array1</h3><h3 id="对-值传递和-引用传递-的深入研究"><a href="#对-值传递和-引用传递-的深入研究" class="headerlink" title="对 值传递和 引用传递 的深入研究"></a>对 值传递和 引用传递 的深入研究</h3><ol>
 <li>jvm中的内存分为三大块（1）：栈（2）：堆（3）：方法区</li>
 <li>对于值传递，在栈中<code>int n1=10; int n2=n1;</code><br>表现为<code>n1-&gt;[10],n2-&gt;[10]</code>将n1指向的10拷贝一份给n2（即n1和n2指向的是不同的内存空间）</li>
-<li>对于引用传递，在栈中<code>int[] arr1=&#123;1,2,3&#125;;</code>表现为<code>arr1--&gt;0x0011(一个地址)</code>该地址指向堆中的一个相应的空间来存储数组的元素。<br>当进行<code>int[] arr2=arr1;</code>时，在栈中，arr1把他的地址拷贝了一份传给arr2<code>arr2--&gt;0x0011</code><br>所以此时，<em><strong>两个数组变量指向同一个内存空间</strong></em><br><img src="/.com//image-1.jpg" alt="Alt text"></li>
+<li>对于引用传递，在栈中<code>int[] arr1=&#123;1,2,3&#125;;</code>表现为<code>arr1--&gt;0x0011(一个地址)</code>该地址指向堆中的一个相应的空间来存储数组的元素。<br>当进行<code>int[] arr2=arr1;</code>时，在栈中，arr1把他的地址拷贝了一份传给arr2<code>arr2--&gt;0x0011</code><br>所以此时，<em><strong>两个数组变量指向同一个内存空间</strong></em><br><img src="/images/image-1.jpg" alt="Alt text"></li>
 </ol>
 <h2 id="（3）：数组拷贝（内容复制）"><a href="#（3）：数组拷贝（内容复制）" class="headerlink" title="（3）：数组拷贝（内容复制）"></a>（3）：数组拷贝（内容复制）</h2><p>遍历原数组的每一个元素的值，将其赋值给新数组的每个元素<br><em><strong>挨个挨个的传递</strong></em></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int a[]=&#123;1,2,3,4,5&#125;;</span><br><span class="line">int b[]=new int[a.length];</span><br><span class="line">for(int i=0;i&lt;a.length;i++)&#123;</span><br><span class="line">    b[i]=a[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -170,7 +170,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/11/22/Java-learning-note-5/" data-id="clp9rluoq00045l1gg9f22mxj" data-title="Java_learning_note_5" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/11/22/Java-learning-note-5/" data-id="clp9u742s0004n31gepw45c3z" data-title="Java_learning_note_5" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -230,10 +230,6 @@
       <ul>
         
           <li>
-            <a href="/2023/11/22/test/">test</a>
-          </li>
-        
-          <li>
             <a href="/2023/11/22/Java-learning-note-6/">Java_learning_note_6</a>
           </li>
         
@@ -247,6 +243,10 @@
         
           <li>
             <a href="/2023/11/22/Java-learning-note-3/">Java_learning_note_3</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/22/Java-learning-note-2/">Java_learning_note_2</a>
           </li>
         
       </ul>
