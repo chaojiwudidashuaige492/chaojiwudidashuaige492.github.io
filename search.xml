@@ -8,7 +8,7 @@
       <link href="/2024/05/23/test1/"/>
       <url>/2024/05/23/test1/</url>
       
-        <content type="html"><![CDATA[<h1 id="this-is-a-test-note"><a href="#this-is-a-test-note" class="headerlink" title="this is a test note"></a>this is a test note</h1><p><img src="/test.jpg" alt="引入图片"></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="this-is-a-test-note"><a href="#this-is-a-test-note" class="headerlink" title="this is a test note"></a>this is a test note</h1><p><img src="/images/test.jpg"></p>]]></content>
       
       
       <categories>
