@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>test1</title>
+      <link href="/2024/05/23/test1/"/>
+      <url>/2024/05/23/test1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="this-is-a-test-note"><a href="#this-is-a-test-note" class="headerlink" title="this is a test note"></a>this is a test note</h1><p><img src="/test.jpg" alt="引入图片"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> test </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2024/05/23/hello-world/"/>
       <url>/2024/05/23/hello-world/</url>
