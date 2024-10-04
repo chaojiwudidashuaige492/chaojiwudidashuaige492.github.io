@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog</title>
+  
+  
+  <link href="http://chaojiwudidashuaige492.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://chaojiwudidashuaige492.github.io/"/>
+  <updated>2024-10-04T15:22:53.901Z</updated>
+  <id>http://chaojiwudidashuaige492.github.io/</id>
+  
+  <author>
+    <name>Chaojiwudidashuaige</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://chaojiwudidashuaige492.github.io/undefined/hello-world.html"/>
+    <id>http://chaojiwudidashuaige492.github.io/undefined/hello-world.html</id>
+    <published>2024-10-04T15:22:53.901Z</published>
+    <updated>2024-10-04T15:22:53.901Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="tag" scheme="http://chaojiwudidashuaige492.github.io/tags/tag/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://chaojiwudidashuaige492.github.io/undefined/test.html"/>
+    <id>http://chaojiwudidashuaige492.github.io/undefined/test.html</id>
+    <published>2024-10-04T15:22:53.901Z</published>
+    <updated>2024-10-04T15:22:53.901Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;coqwiocbqocsa&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
