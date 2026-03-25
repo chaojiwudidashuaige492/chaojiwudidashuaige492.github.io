@@ -1,0 +1,27 @@
+---
+import BooksLayout from '../../layouts/BooksLayout.astro';
+import { getCollection, render } from 'astro:content';
+import { buildTree } from '../../utils/tree';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('books', ({ data }) => !data.draft);
+  return entries.map(entry => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const allEntries = await getCollection('books', ({ data }) => !data.draft);
+const tree = buildTree(allEntries);
+const { Content } = await render(entry);
+---
+
+<BooksLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  tree={tree}
+  currentSlug={entry.id}
+>
+  <Content />
+</BooksLayout>

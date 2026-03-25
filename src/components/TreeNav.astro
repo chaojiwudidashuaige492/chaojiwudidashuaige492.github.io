@@ -1,0 +1,37 @@
+---
+import type { TreeNode } from '../utils/tree';
+import TreeNodeComponent from './TreeNode.astro';
+
+interface Props {
+  tree: TreeNode[];
+  currentSlug: string;
+}
+
+const { tree, currentSlug } = Astro.props;
+---
+
+<nav class="tree-nav" aria-label="目录导航">
+  <ul class="tree-root">
+    {tree.map(node => (
+      <TreeNodeComponent node={node} currentSlug={currentSlug} />
+    ))}
+  </ul>
+</nav>
+
+<style>
+  .tree-nav {
+    position: sticky;
+    top: calc(var(--navbar-height) + var(--space-6));
+    max-height: calc(100dvh - var(--navbar-height) - var(--space-12));
+    overflow-y: auto;
+    padding: var(--space-4) 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border) transparent;
+  }
+
+  .tree-root {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+</style>

@@ -1,0 +1,90 @@
+---
+interface Props {
+  slug: string;
+  title?: string;
+}
+
+const { slug, title } = Astro.props;
+const segments = slug.split('/');
+
+interface Crumb {
+  label: string;
+  href: string;
+}
+
+const crumbs: Crumb[] = [
+  { label: '首页', href: '/' },
+  { label: 'Books', href: '/books' },
+];
+
+// Add path segments (folders)
+let accumulated = '/books';
+for (let i = 0; i < segments.length - 1; i++) {
+  accumulated += '/' + segments[i];
+  crumbs.push({
+    label: segments[i].charAt(0).toUpperCase() + segments[i].slice(1),
+    href: accumulated,
+  });
+}
+
+// Add current page title as last crumb (no link)
+if (title) {
+  crumbs.push({ label: title, href: '' });
+}
+---
+
+<nav class="breadcrumbs" aria-label="面包屑导航">
+  <ol>
+    {crumbs.map((crumb, i) => (
+      <li>
+        {i < crumbs.length - 1 ? (
+          <>
+            <a href={crumb.href}>{crumb.label}</a>
+            <span class="separator">/</span>
+          </>
+        ) : (
+          <span class="current">{crumb.label}</span>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<style>
+  .breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .breadcrumbs li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-size: 0.8125rem;
+  }
+
+  .breadcrumbs a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+
+  .breadcrumbs a:hover {
+    color: var(--color-accent);
+  }
+
+  .separator {
+    color: var(--color-border);
+    font-size: 0.75rem;
+  }
+
+  .current {
+    color: var(--color-text);
+    font-weight: 500;
+  }
+</style>

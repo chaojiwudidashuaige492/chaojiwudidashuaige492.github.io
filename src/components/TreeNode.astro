@@ -1,0 +1,98 @@
+---
+import type { TreeNode } from '../utils/tree';
+
+interface Props {
+  node: TreeNode;
+  currentSlug: string;
+}
+
+const { node, currentSlug } = Astro.props;
+const isActive = node.path === currentSlug;
+const isAncestor = currentSlug.startsWith(node.path + '/');
+---
+
+<li class:list={['tree-item', { active: isActive }]}>
+  {node.isLeaf ? (
+    <a href={`/books/${node.path}`} class:list={['tree-link', { active: isActive }]}>
+      {node.label}
+    </a>
+  ) : (
+    <details open={isAncestor || isActive}>
+      <summary class="tree-folder">{node.label}</summary>
+      <ul class="tree-children">
+        {node.children.map(child => (
+          <Astro.self node={child} currentSlug={currentSlug} />
+        ))}
+      </ul>
+    </details>
+  )}
+</li>
+
+<style>
+  .tree-item {
+    list-style: none;
+  }
+
+  .tree-folder {
+    display: block;
+    padding: var(--space-2) var(--space-3);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-text);
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    user-select: none;
+    transition: background var(--transition-fast);
+  }
+
+  .tree-folder:hover {
+    background: var(--color-bg-subtle);
+  }
+
+  .tree-folder::marker {
+    content: '';
+  }
+
+  .tree-folder::before {
+    content: '▸ ';
+    font-size: 0.75em;
+    color: var(--color-text-secondary);
+    transition: transform var(--transition-fast);
+    display: inline-block;
+  }
+
+  details[open] > .tree-folder::before {
+    content: '▾ ';
+  }
+
+  .tree-children {
+    padding-left: var(--space-4);
+    margin: 0;
+  }
+
+  .tree-link {
+    display: block;
+    padding: var(--space-1) var(--space-3);
+    font-size: 0.8125rem;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    transition: color var(--transition-fast),
+                background var(--transition-fast),
+                transform var(--transition-fast),
+                box-shadow var(--transition-fast);
+  }
+
+  .tree-link:hover {
+    color: var(--color-text);
+    background: var(--color-bg-subtle);
+    transform: translateX(2px);
+  }
+
+  .tree-link.active {
+    color: var(--color-accent);
+    background: color-mix(in srgb, var(--color-accent) 8%, transparent);
+    font-weight: 500;
+    box-shadow: inset 2px 0 0 var(--color-accent);
+  }
+</style>

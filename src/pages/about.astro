@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="关于">
+  <main class="about">
+    <h1>关于</h1>
+    <p>这里是个人介绍页面，待补充。</p>
+  </main>
+</BaseLayout>
+
+<style>
+  .about {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: var(--space-12) var(--space-6);
+  }
+
+  .about h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--space-6);
+  }
+
+  .about p {
+    color: var(--color-text-secondary);
+    line-height: var(--line-height);
+  }
+</style>

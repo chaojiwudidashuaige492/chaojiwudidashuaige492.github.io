@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const entries = await getCollection('books', ({ data }) => !data.draft);
+
+// Group by top-level category
+const categories = new Map<string, { count: number; description: string }>();
+for (const entry of entries) {
+  const topLevel = entry.id.split('/')[0];
+  const existing = categories.get(topLevel);
+  if (existing) {
+    existing.count++;
+  } else {
+    categories.set(topLevel, { count: 1, description: '' });
+  }
+}
+---
+
+<BaseLayout title="Books">
+  <main class="books-index">
+    <div class="books-header">
+      <h1>Books</h1>
+      <p>知识体系与学习笔记</p>
+    </div>
+
+    <div class="categories">
+      {[...categories.entries()].map(([name, info]) => (
+        <a href={`/books/${name}`} class="category-card">
+          <h2>{name.charAt(0).toUpperCase() + name.slice(1)}</h2>
+          <span class="count">{info.count} 篇文章</span>
+        </a>
+      ))}
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .books-index {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--space-12) var(--space-6);
+  }
+
+  .books-header {
+    margin-bottom: var(--space-12);
+  }
+
+  .books-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--space-3);
+    animation: fade-up 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  .books-header p {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    animation: fade-up 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 100ms both;
+  }
+
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: var(--space-4);
+  }
+
+  .category-card {
+    display: block;
+    padding: var(--space-6);
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 0.5px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    color: var(--color-text);
+    box-shadow: var(--shadow-sm);
+    animation: card-fade-up 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    transition: transform var(--transition-smooth),
+                box-shadow var(--transition-smooth),
+                border-color var(--transition-fast);
+  }
+
+  .category-card:nth-child(1) { animation-delay: 0ms; }
+  .category-card:nth-child(2) { animation-delay: 60ms; }
+  .category-card:nth-child(3) { animation-delay: 120ms; }
+  .category-card:nth-child(4) { animation-delay: 180ms; }
+  .category-card:nth-child(5) { animation-delay: 240ms; }
+  .category-card:nth-child(6) { animation-delay: 300ms; }
+
+  .category-card:hover {
+    transform: translateY(-4px) scale(1.005);
+    box-shadow: var(--shadow-md);
+    border-color: color-mix(in srgb, var(--color-accent) 30%, var(--glass-border));
+    color: var(--color-text);
+  }
+
+  .category-card h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--space-2);
+  }
+
+  .count {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+  }
+</style>
